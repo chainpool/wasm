@@ -1,12 +1,12 @@
-// Copyright 2019-2020 @polkadot/wasm-crypto authors & contributors
+// Copyright 2019-2020 @chainx-v2/wasm-crypto authors & contributors
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 /* eslint-disable sort-keys */
 
-const { assert } = require('@polkadot/util');
+const { assert } = require('@chainx-v2/util');
 
-const INIT_ERRROR = '@polkadot/wasm-crypto has not been initialized';
+const INIT_ERRROR = '@chainx-v2/wasm-crypto has not been initialized';
 
 module.exports = function (stubbed) {
   const wrapReady = (fn) =>

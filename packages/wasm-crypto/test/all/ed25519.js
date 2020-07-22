@@ -1,11 +1,11 @@
-// Copyright 2019-2020 @polkadot/wasm-crypto authors & contributors
+// Copyright 2019-2020 @chainx-v2/wasm-crypto authors & contributors
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
 /* eslint-disable camelcase */
 
 const crypto = require('crypto');
-const { assert, hexToU8a, stringToU8a, u8aToHex } = require('@polkadot/util');
+const { assert, hexToU8a, stringToU8a, u8aToHex } = require('@chainx-v2/util');
 
 function extractKeys (pair) {
   return [pair, pair.slice(32), pair.slice(0, 32)];

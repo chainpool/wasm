@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright 2019-2020 @polkadot/wasm authors & contributors
+# Copyright 2019-2020 @chainx-v2/wasm authors & contributors
 # This software may be modified and distributed under the terms
 # of the Apache-2.0 license. See the LICENSE file for details.
 
@@ -52,13 +52,13 @@ sed -i -e 's/wasm = require/\/\/ wasm = require/g' $SRC_WASM
 sed -i -e 's/var wasm;/const crypto = require('\''crypto'\''); let wasm; const requires = { crypto };/g' $SRC_WASM
 sed -i -e 's/return addHeapObject(require(varg0));/return addHeapObject(requires[varg0]);/g' $SRC_WASM
 
-# this creates issues in both the browser and RN (@polkadot/util has a polyfill)
-sed -i -e 's/const { TextEncoder } = require(String.raw`util`);/const { stringToU8a } = require('\''@polkadot\/util'\'');/g' $SRC_WASM
+# this creates issues in both the browser and RN (@chainx-v2/util has a polyfill)
+sed -i -e 's/const { TextEncoder } = require(String.raw`util`);/const { stringToU8a } = require('\''@chainx-v2\/util'\'');/g' $SRC_WASM
 sed -i -e 's/let cachedTextEncoder = new /\/\/ let cachedTextEncoder = new /g' $SRC_WASM
 sed -i -e 's/cachedTextEncoder\.encode/stringToU8a/g' $SRC_WASM
 
-# this creates issues in both the browser and RN (@polkadot/util has a polyfill)
-sed -i -e 's/const { TextDecoder } = require(String.raw`util`);/const { u8aToString } = require('\''@polkadot\/util'\'');/g' $SRC_WASM
+# this creates issues in both the browser and RN (@chainx-v2/util has a polyfill)
+sed -i -e 's/const { TextDecoder } = require(String.raw`util`);/const { u8aToString } = require('\''@chainx-v2\/util'\'');/g' $SRC_WASM
 sed -i -e 's/let cachedTextDecoder = new /\/\/ let cachedTextDecoder = new /g' $SRC_WASM
 sed -i -e 's/cachedTextDecoder\.decode/u8aToString/g' $SRC_WASM
 

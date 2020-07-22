@@ -7,11 +7,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@polkadot/wasm-schnorrkel": [ "packages/wasm-schnorrkel/src" ]
+      "@chainx-v2/wasm-schnorrkel": [
+        "packages/wasm-schnorrkel/src"
+      ]
     },
     "skipLibCheck": true,
     "typeRoots": [
-      "./node_modules/@polkadot/ts",
+      "./node_modules/@chainx-v2/ts",
       "./node_modules/@types"
     ]
   }

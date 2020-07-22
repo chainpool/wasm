@@ -1,18 +1,18 @@
-# @polkadot/wasm-crypto
+# @chainx-v2/wasm-crypto
 
 Wrapper around crypto hashing functions
 
 ## Usage
 
-Install the package (also requires `@polkadot/util` for `TextEncoder` polyfills - not included here as a dependency to keep the tree lean)
+Install the package (also requires `@chainx-v2/util` for `TextEncoder` polyfills - not included here as a dependency to keep the tree lean)
 
-`yarn add @polkadot/wasm-crypto @polkadot/util`
+`yarn add @chainx-v2/wasm-crypto @chainx-v2/util`
 
 Use it -
 
 ```js
-const { u8aToHex } = require('@polkadot/util');
-const { bio39Generate, bip39ToSeed, waitReady } = require('@polkadot/wasm-crypto');
+const { u8aToHex } = require('@chainx-v2/util');
+const { bio39Generate, bip39ToSeed, waitReady } = require('@chainx-v2/wasm-crypto');
 
 async function main () {
   // first wait until the WASM has been loaded (async init)
